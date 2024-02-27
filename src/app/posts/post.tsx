@@ -1,20 +1,12 @@
-'use client'
 import { Postagens } from "@/components/postagem"
-import { Filter } from "@/function/filter"
 export async function Post(){
 
-  const { filtro } = Filter()
-
-  console.log(filtro)
-
-  const response = await fetch(`https://back-end-blog-sml1.onrender.com/?search=${filtro}`, {
+  const response = await fetch(`https://back-end-blog-sml1.onrender.com/?search=`, {
     next: {
       tags: ['get-post']
     }
   })
   const data = await response.json()
-
-  console.log(data)
 
   return (
     data.map((items:any)=>(
