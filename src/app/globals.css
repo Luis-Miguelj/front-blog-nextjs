@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+  margin: 0px;
+  padding: 0px;
+}
 
 #scroll-posts::-webkit-scrollbar{
   width: 8px;
